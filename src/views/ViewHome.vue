@@ -15,7 +15,7 @@ function showModal() {
 <template>
   <ColoredLetters/>
   <TypingText />
-  <ButtonPrimary :button-text="'Lag en nettside'" @click="showModal"/>
+  <ButtonPrimary :button-text="'Kontakt meg her'" @click="showModal"/>
   <ButtonPrimary :button-text="'Jeg prøver lykken'" :to="'/about'"/>
   <ContactFormModal v-model="isModalVisible"/>
 </template>
