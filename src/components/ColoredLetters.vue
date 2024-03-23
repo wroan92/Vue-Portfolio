@@ -19,36 +19,13 @@ const coloredLetters = ref(name.split('').map(letter => ({
 
 <template>
       <div id="nameContainer">
-    <section id="firstNameContainer">
+    <section class="firstNameContainer">
     <span v-for="(item, index) in coloredLetters" :key="index" :style="{ color: item.color }">
       {{ item.letter }}
     </span>
   </section>
-    <section id="lastNameContainer">
+    <section class="lastNameContainer">
       Wroldsen
     </section>
   </div>
 </template>
-
-<style scoped>
-#firstNameContainer {
-  font-size: 4em;
-  font-weight: bold;
-  margin-bottom: -20px;
-}
-#lastNameContainer {
-  position: relative;
-  left: 70px;
-  font-size: 2em;
-  font-weight: bold;
-  color: #4285F4;
-  margin-bottom: 20px;
-}
-
-#btnContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-</style>

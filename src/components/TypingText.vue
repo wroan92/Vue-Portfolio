@@ -50,18 +50,3 @@
   };
   </script>
   
-  <style scoped>
-.fake-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.5px solid #000000;
-  border-radius: 40px;
-  white-space: pre;
-  width: 60vw;
-  max-width: 1000px;
-  min-height: 45px;
-  text-align: center;
-}
-  </style>
-  
