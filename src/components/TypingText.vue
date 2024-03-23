@@ -13,17 +13,27 @@
     setup() {
       const texts = ref([
         'Frontend Utvikler',
+        'Problemløser',
         'Pappa',
-        'Gladlaks',
-        'Lærer',
-        'Jeger',
+        'Frontend Lærer på Gokstad Akademiet',
+        'Ektemann',
+        'Lærevillig',
+        'Frontend Utvikler',
+        'Eventyrlysten',
         'Løper',
-        'Syklist',
-        'Pappa til en hund'
+        'Gladlaks',
+        '11 412 dager gammel',
+        'Frontend Lærer på Gokstad Akademiet',
+        'Innovativ',
+        'Frontend Utvikler',
+        'Jeger',
+        'Samarbeidsvillig',
+        'Frontend Lærer på Gokstad Akademiet',
+        'Hundeeier',
       ]);
       const displayedText = ref('Jeg er ');
-      const typingSpeed = 150;
-      const pauseBetweenTexts = 2000;
+      const typingSpeed = 120;
+      const pauseBetweenTexts = 1500;
   
       async function typeText(text: string) {
         for (let i = 0; i <= text.length; i++) {
@@ -37,8 +47,8 @@
           await typeText(text);
           await new Promise(resolve => setTimeout(resolve, pauseBetweenTexts));
         }
-        displayedText.value = 'Jeg er ';
-        displayTexts(); // Gjenta prosessen
+        /* displayedText.value = 'Jeg er '; */
+        displayTexts(); 
       }
   
       onMounted(() => {
