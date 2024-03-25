@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export PATH_TO_REPO=/home/andepktr/repositories/Vue-Portfolio
-    - export PATH_TO_PUBLIC_HTML=/home/andepktr/public_html
-    - /bin/cp -R $PATH_TO_REPO/* $PATH_TO_PUBLIC_HTML
