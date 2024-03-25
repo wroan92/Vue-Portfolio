@@ -1,0 +1,15 @@
+// Definerer typografi-stilregler
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  

@@ -1,0 +1,29 @@
+// Appliserer grunnleggende stilregler
+@import 'variables';
+
+* {
+  font-family: $font-stack;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $font-color;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: $background-color;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
