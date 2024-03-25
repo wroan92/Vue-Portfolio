@@ -3,9 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "scripts": {
     "dev": "concurrently \"npm run dev:vue\" \"npm run dev:server\"",
     "dev:vue": "vite",
