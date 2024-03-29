@@ -25,7 +25,7 @@ import { useToast } from 'vue-toastification';
 import { ref } from 'vue';
 
 const toast = useToast();
-const props = defineProps({
+defineProps({
   modelValue: Boolean
 });
 const emit = defineEmits(['update:modelValue']);
@@ -36,18 +36,20 @@ const email = ref('');
 const message = ref('');
 
 async function sendEmail() {
+  // Eksempel på en miljøspesifikk URL
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: name.value, 
-    email: email.value,
-    message: message.value,
-  }),
-});
+    const response = await fetch(`${backendUrl}/send-email`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      }),
+    });
 
     if (response.ok) { 
       closeModal(); 
