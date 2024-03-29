@@ -55,5 +55,5 @@ app.post('/send-email', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server kjører på http://localhost:${port}`);
+  console.log(`Server kjører på port:${port}`);
 });

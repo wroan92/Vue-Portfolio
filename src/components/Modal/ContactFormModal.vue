@@ -39,7 +39,7 @@ async function sendEmail() {
   // Eksempel på en miljøspesifikk URL
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   try {
-    const response = await fetch(`${backendUrl}/send-email`, {
+    const response = await fetch(`${backendUrl}/sendEmail`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
