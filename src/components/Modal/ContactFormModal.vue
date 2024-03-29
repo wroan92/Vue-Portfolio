@@ -36,8 +36,8 @@ const email = ref('');
 const message = ref('');
 
 async function sendEmail() {
-  // Eksempel på en miljøspesifikk URL
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  console.log(`Full URL being used for request: ${backendUrl}/sendEmail`);
   try {
     const response = await fetch(`${backendUrl}/sendEmail`, {
       method: 'POST',
