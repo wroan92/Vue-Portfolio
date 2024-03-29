@@ -37,9 +37,9 @@ const message = ref('');
 
 async function sendEmail() {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
-  console.log(`Full URL being used for request: ${backendUrl}/sendEmail`);
+  console.log(`Full URL being used for request: ${backendUrl}/send-email`);
   try {
-    const response = await fetch(`${backendUrl}/sendEmail`, {
+    const response = await fetch(`${backendUrl}/send-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

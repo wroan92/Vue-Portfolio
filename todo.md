@@ -1,0 +1,1 @@
+()Lukke modal før feilmeling/toast 
