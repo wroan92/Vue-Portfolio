@@ -16,5 +16,5 @@ export default defineConfig({
 /*     rollupOptions: {
       input: 'src/main.ts'
     } */
-  }
+  }S
 })
