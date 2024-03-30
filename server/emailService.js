@@ -1,16 +1,15 @@
-const express = require('express');
+import express from 'express';
 require('dotenv').config();
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
+import { createTransport } from 'nodemailer';
+import { json } from 'body-parser';
 const app = express();
-const cors = require('cors');
-const port = 3000;
+import cors from 'cors';
 
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'hotmail',
   auth: {
     user: process.env.EMAIL, 
