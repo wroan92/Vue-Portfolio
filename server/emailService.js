@@ -1,13 +1,13 @@
 import express from 'express';
-require('dotenv').config();
-import { createTransport } from 'nodemailer';
-import { json } from 'body-parser';
-const app = express();
+import dotenv from 'dotenv';
+import nodemailer from 'nodemailer';
 import cors from 'cors';
+
+dotenv.config();
+const app = express();
 const port = process.env.PORT || 8080;
 
-
-
+// CORS-hviteliste og konfigurasjon
 var whitelist = ['https://anderswroldsen.com', 'http://localhost:4173'];
 var corsOptions = {
   origin: function (origin, callback) {
@@ -19,11 +19,12 @@ var corsOptions = {
   },
 };
 
+// Bruk av middleware
 app.use(cors(corsOptions));
-app.use(json());
+app.use(express.json());
 
 
-const transporter = createTransport({
+const transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
     user: process.env.EMAIL, 
