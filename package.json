@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:vue\" \"npm run dev:server\"",
     "dev:vue": "vite",
-    "dev:server": "node server/emailService.cjs",
+    "dev:server": "node server/emailService.js",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },

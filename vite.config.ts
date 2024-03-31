@@ -11,8 +11,8 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: '../build',
-    assetsDir: 'assets',
+ /*    outDir: '../build',
+    assetsDir: 'assets', */
 /*     rollupOptions: {
       input: 'src/main.ts'
     } */

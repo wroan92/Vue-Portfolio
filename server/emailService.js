@@ -4,16 +4,24 @@ import { createTransport } from 'nodemailer';
 import { json } from 'body-parser';
 const app = express();
 import cors from 'cors';
+const port = process.env.PORT || 8080;
 
 
+
+var whitelist = ['https://anderswroldsen.com', 'http://localhost:4173'];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
 app.use(cors(corsOptions));
 app.use(json());
 
-const corsOptions = {
-  origin: 'https://anderswroldsen.com',
-  optionsSuccessStatus: 200
-}
 
 const transporter = createTransport({
   service: 'hotmail',
