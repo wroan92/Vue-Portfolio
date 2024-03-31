@@ -6,8 +6,14 @@ const app = express();
 import cors from 'cors';
 
 
-app.use(cors());
+
+app.use(cors(corsOptions));
 app.use(json());
+
+const corsOptions = {
+  origin: 'https://anderswroldsen.com',
+  optionsSuccessStatus: 200
+}
 
 const transporter = createTransport({
   service: 'hotmail',
