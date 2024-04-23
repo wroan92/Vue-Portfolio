@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // CORS-hviteliste og konfigurasjon
-var whitelist = ['https://anderswroldsen.com', 'http://localhost:4173'];
+var whitelist = ['https://anderswroldsen.com', 'http://localhost:3000'];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {

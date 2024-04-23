@@ -36,7 +36,7 @@ const email = ref('');
 const message = ref('');
 
 async function sendEmail() {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = 'https://anderswroldsen.com/api';
   console.log(`Full URL being used for request: ${backendUrl}/send-email`);
   try {
     const response = await fetch(`${backendUrl}/send-email`, {
